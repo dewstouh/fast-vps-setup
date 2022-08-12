@@ -1,0 +1,71 @@
+
+<h1 align="center">Configuración Rápida & Inicial para VPS</h1>
+
+<h4 align="center">Configura tu VPS en cuestión de <u>segundos</u></h4>
+
+<h6 align="center">Ubuntu Server 22.04 (AMPERE)</h2>
+
+# TODO EN UNO
+
+```bash
+sudo apt update -y && sudo apt upgrade -y && sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev -y && sudo apt install curl -y && curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash && source ~/.profile && nvm install 16.11.0 && npm i pm2 -g && sudo apt-get install default-jre -y && sudo timedatectl set-timezone Europe/Madrid && sudo apt install ffmpeg && pm2 flush && pm2 install pm2-logrotate && pm2 set pm2-logrotate:max_size 10M && pm2 set pm2-logrotate:compress true
+
+```
+
+## Establecemos la fecha de horaria correcta
+
+```bash
+sudo timedatectl set-timezone Europe/Madrid
+```
+
+## Actualización de Repositorios
+
+Actualiza la lista de repositorios de ubuntu y actualiza el kernel.
+
+```bash
+sudo apt update -y && sudo apt upgrade -y
+```
+
+## Instalación de Dependencias
+
+Con esto podrás instalar las dependencias y evitar errores a la hora de instalar canvas u otros errores al hacer `npm i`
+
+```bash
+sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
+```
+
+## Instalación de Programas
+
+Instalamos Node Version Manager para poder instalar NodeJS `16.11.0`
+
+```bash
+sudo apt install curl && curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash && source ~/.profile && nvm install 16.11.0
+```
+
+## Instalación de PM2
+
+Instalamos el Gestor de Procesos pm2 para mantener nuestras aplicaciones 24/7 encendidas
+
+```bash
+npm i pm2 -g && pm2 startup
+```
+
+## Instalación de Java JDK
+
+Instalamos Java para poder usar Lavalink u otros.
+
+```bash
+sudo apt install default-jre -y
+```
+
+## Instalamos FFMPEG para poder reproducir audio
+
+```bash
+sudo apt install ffmpeg -y
+```
+
+## [OPCIONAL PERO RECOMENDADO] Instalar rotación de logs para limpiar los logs de pm2
+
+```bash
+pm2 flush && pm2 install pm2-logrotate && pm2 set pm2-logrotate:max_size 10M && pm2 set pm2-logrotate:compress true
+```
