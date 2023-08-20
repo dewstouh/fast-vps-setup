@@ -35,10 +35,10 @@ sudo apt-get install build-essential
 
 ## Instalación de Programas
 
-Instalamos Node Version Manager para poder instalar NodeJS `16.11.0`
+Instalamos Node Version Manager para poder instalar NodeJS `18.17.1`
 
 ```bash
-sudo apt install curl && curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash && source ~/.profile && nvm install 16.11.0
+sudo apt install curl && curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash && source ~/.profile && nvm install 18.17.1
 ```
 
 ## Instalación de PM2
