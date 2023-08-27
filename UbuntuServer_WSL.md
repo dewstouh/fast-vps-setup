@@ -68,7 +68,7 @@ sudo apt install ffmpeg -y
 ### SYMLINK NODE
 1. Eliminar el symlink activo de NODE
 ```bash
-sudo unlink /usr/bin/node
+sudo unlink /usr/bin/node; sudo unlink /usr/bin/npm
 ```
 2. Establecer el nuevo symlink de NODE
 ```bash
@@ -76,12 +76,12 @@ whereis node
 ```
 3.
 ```bash
-sudo ln -s /home/$USER/.nvm/versions/node/v16.11.0/bin/node /usr/bin/node
+sudo ln -s /home/$USER/.nvm/versions/node/v18.17.1/bin/node /usr/bin/node
 ```
 
 4. SYMLINK NPM
 ```bash
-sudo ln -s /home/$USER/.nvm/versions/node/v16.11.0/bin/npm /usr/bin/npm
+sudo ln -s /home/$USER/.nvm/versions/node/v18.17.1/bin/npm /usr/bin/npm
 ```
 
 ## [OPCIONAL PERO RECOMENDADO] Instalar rotación de logs para limpiar los logs de pm2
