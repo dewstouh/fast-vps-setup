@@ -54,7 +54,7 @@ npm i pm2 -g && pm2 startup
 Instalamos Java para poder usar Lavalink u otros.
 
 ```bash
-wget https://builds.openlogic.com/downloadJDK/openlogic-openjdk/11.0.16+8/openlogic-openjdk-11.0.16+8-linux-x64-deb.deb && sudo apt install ./openlogic-openjdk-11.0.16+8-linux-x64-deb.deb
+sudo apt install openjdk-17-jdk openjdk-17-jre
 ```
 
 ## Instalamos FFMPEG para poder reproducir audio
@@ -76,12 +76,12 @@ whereis node
 ```
 3.
 ```bash
-sudo ln -s /home/<nombre>/.nvm/versions/node/v16.11.0/bin/node /usr/bin/node
+sudo ln -s /home/$USER/.nvm/versions/node/v16.11.0/bin/node /usr/bin/node
 ```
 
 4. SYMLINK NPM
 ```bash
-sudo ln -s /home/diegotuf/.nvm/versions/node/v16.11.0/bin/npm /usr/bin/npm
+sudo ln -s /home/$USER/.nvm/versions/node/v16.11.0/bin/npm /usr/bin/npm
 ```
 
 ## [OPCIONAL PERO RECOMENDADO] Instalar rotación de logs para limpiar los logs de pm2
